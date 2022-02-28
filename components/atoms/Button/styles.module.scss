@@ -1,0 +1,16 @@
+@use "../../../styles/variables.scss";
+@import "../../../styles/variables.scss";
+
+.button {
+  @include variables.button;
+  background-color: $color-primary;
+  color: $white;
+  border: none;
+  border-radius: 100px;
+  padding: 10px 30px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-primary-50;
+  }
+}
