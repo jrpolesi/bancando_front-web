@@ -1,0 +1,23 @@
+@use "../../../styles/variables.scss";
+@import "../../../styles/variables.scss";
+
+.textInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 570px;
+
+  h1 {
+    @include variables.title1;
+    color: $white;
+  }
+
+  h3 {
+    @include variables.title4;
+    color: $grey-0;
+  }
+
+  button {
+    align-self: flex-start;
+  }
+}
