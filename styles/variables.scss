@@ -1,0 +1,63 @@
+// COLORS
+$color-primary: #ff00e5;
+$color-primary-50: #c70cb4;
+
+$grey-4: #333333;
+$grey-3: #464646;
+$grey-2: #838383;
+$grey-1: #afafaf;
+$grey-0: #f8f9fa;
+
+$white: #ffffff;
+
+//FONTS
+@mixin title1 {
+  font-size: 48px;
+  font-weight: 800;
+}
+
+@mixin title2 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+@mixin title3 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+@mixin title4 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+@mixin body {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@mixin button {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+@mixin input-component {
+  label {
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  input {
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 22px;
+  }
+}
+
+
+// Others
+@mixin container {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
