@@ -1,0 +1,93 @@
+@use "../../../styles/variables.scss";
+@import "../../../styles/variables.scss";
+
+// .form__input_wrapper {
+//   @include variables.input-component;
+//   position: relative;
+//   padding: 15px 0 0;
+//   margin-top: 10px;
+//   width: 50%;
+// }
+
+// .form__field {
+//   border: 0;
+//   border-bottom: 2px solid #333;
+//   outline: 0;
+//   color: #fff;
+//   padding: 7px 0;
+//   background: transparent;
+//   transition: border-color 0.2s;
+
+//   &::placeholder {
+//     color: transparent;
+//   }
+
+//   &:placeholder-shown ~ .form__label {
+//     cursor: text;
+//     top: 20px;
+//   }
+// }
+
+// .form__label {
+//   position: absolute;
+//   top: 0;
+//   display: block;
+//   transition: 0.2s;
+//   color: #333;
+// }
+
+// .form__field:focus {
+//   ~ .form__label {
+//     position: absolute;
+//     top: 0;
+//     display: block;
+//     transition: 0.2s;
+//     color: $color-primary;
+//   }
+//   padding-bottom: 6px;  
+//   border-width: 3px;
+//   border-image: linear-gradient(to right, $color-primary,#333);
+//   border-image-slice: 1;
+// }
+// /* reset input */
+// .form__field{
+//   &:required,&:invalid { box-shadow:none; }
+// }
+
+
+
+.form__input_wrapper{
+  @include variables.input-component;
+  position: relative;
+
+  label{
+    position: absolute;
+    left: 5px;
+    top: 0;
+    transition: top .2s;
+    color: $grey-1;
+  }
+
+  input{
+    border: 0;
+    outline: 0;
+    border-bottom: 2px solid $grey-1;
+    transition: border-color .2s;
+    background-color: transparent;
+    border-radius: 5px;
+  }
+
+  &:focus-within {
+    input {
+      transition: border-color .2s;
+      border-bottom: 2px solid $color-primary;
+      color: $color-primary;
+    }
+
+    label {
+      color: $color-primary;
+      top: -10px;
+      transition: top .2s;
+    }
+  }
+}
